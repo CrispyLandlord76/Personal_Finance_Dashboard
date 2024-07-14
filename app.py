@@ -34,7 +34,7 @@ def local_css(file_name):
     else:
         st.warning(f"Custom CSS file '{file_name}' not found.")
 
-local_css("style.css")
+local_css("style.CSS")
 
 # Get the correct path for the database file
 if hasattr(sys, '_MEIPASS'):
