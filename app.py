@@ -522,6 +522,11 @@ def main():
         **Investment** (developing...)\n
                 
         Use the menu on the left to navigate through the application.
+                 
+        This tool is generated mostly by ChatGPT-4o. During this beta stage, your report on bugs will be appreciated. 
+        More features will be added in the future. Have fun!
+        (Date: 07/14/2024 Beta 1.0)
+
         """)
     elif choice == "Monthly Balance Sheet":
         submenu = ["Add Asset", "Add Liability", "Visualize Data", "Saving Goals","View Data",]
