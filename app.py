@@ -536,7 +536,7 @@ def main():
         - **Add Asset**: Record your balance of assets
         - **Add Liability**: Record your balance of liabilities.
         - **Visualize Data**: Visualize your financial data with charts, export and save balance sheet.
-            **!remember to use "Export Database" after you updated your monthly data, you could retrive them using "import Database"
+            (**Attention**: Remember to use "Export Database" after you updated your monthly data, you could retrive them using "import Database")
         - **Saving Goals**: Set saving goals and track them.
         - **View Data**: View or delete your recorded data.
         
@@ -547,7 +547,7 @@ def main():
         This tool is generated mostly by ChatGPT-4o. During this beta stage, your report on bugs will be appreciated. 
         More features will be added in the future. Have fun!
         
-        **Release note (Date: 07/14/2024 Beta 1.0)
+        **Release note (Date: 07/14/2024 Beta 1.0)**
         - Use the "Export Database" and "Import Database" to save and retrive your data after and before you add assets and liabilities, otherwise your data will be lost after app updating.
         - Select the available year-month before your export balance sheet.
         - The history saving goal might be lost after app updating, will be fixed in future version.
