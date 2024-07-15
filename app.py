@@ -51,6 +51,13 @@ def create_connection():
         st.error(e)
     return conn
 
+# Import database
+def import_database(uploaded_file):
+    if uploaded_file is not None:
+        with open(db_path, 'wb') as f:
+            f.write(uploaded_file.getbuffer())
+        st.success("Database imported successfully!")
+
 # Function to insert an asset into the database
 def insert_asset(year, month, type, nickname, amount):
     conn = create_connection()
@@ -318,6 +325,16 @@ def plot_trend(goal, asset_values, goal_idx):
     )
 
     st.plotly_chart(fig)
+
+# Export database
+def export_database():
+    with open(db_path, 'rb') as f:
+        st.download_button(
+            label="Export Database",
+            data=f,
+            file_name='Raw_data.db',
+            mime='application/octet-stream'
+        )
 
 # Function to export data to CSV
 def export_to_csv(assets, liabilities, selected_months, start_date, end_date, currency_symbol):
@@ -601,6 +618,14 @@ def main():
        
         elif sub_choice == "Visualize Data":
             st.subheader("Visualize Data")
+            
+            # Export database button
+            export_database()
+            
+            # Import database uploader
+            uploaded_file = st.file_uploader("Import Database", type=['db'])
+            if uploaded_file is not None:
+                import_database(uploaded_file)
 
             assets = read_assets()
             liabilities = read_liabilities()
